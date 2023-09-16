@@ -1,0 +1,75 @@
+
+//tache numero :
+
+PROCEDURE dot_product (v1, v2)
+VAR
+    ps:=0
+BEGIN
+    ps = 0  
+    Pour i de 1 à Longueur(v1)  
+        ps = ps + v1[i] * v2[i]  
+    Fin Pour
+END
+
+
+FUNCTION  orthogonaux(v1, v2) : INTEGER
+VAR
+    
+BEGIN
+    ps = dot_product(v1, v2)  
+    Si ps = 0  
+        Retourner Vrai
+    Sinon
+        Retourner Faux
+    Fin Si
+
+   
+
+END
+
+ALGORITHM Produit scalaire
+VAR
+n:INTEGER
+   
+BEGIN
+    write("donner n ");
+    read(n);
+    Pour i de 1 a n :
+        read(v1) 
+        read(v2)  
+        Si sont_orthogonaux(v1, v2) = Vrai
+            read("Les vecteurs sont orthogonaux")
+        Sinon
+            read( "Les vecteurs ne sont pas orthogonaux")
+        Fin Si
+    Fin Pour
+
+    
+END
+
+
+
+//tache numero 2::
+
+
+ALGORITHM tri_par_insertion
+VAR
+    tab leau: ARRAY_OF INTEGER[]; .
+   i : INTEGER; 
+   
+BEGIN
+    Pour i de 1 à (Longueur(tableau) - 1);
+        element_courant = tableau[i]
+            j = i - 1
+         WHILE (j >= 0 et element_courant < tableau[j]) DO
+            tableau[j + 1] = tableau[j]
+                j = j - 1
+        END_WHILE
+        tableau[j + 1] = element_courant
+    Fin Pour
+END
+
+
+
+
+        
